@@ -1,19 +1,7 @@
-import "./App.css";
-
-import AddUser from "./components/AddUser/AddUser";
-import UserList from "./components/UserList/UserList";
+import User from "./components/User/User";
 
 function App() {
-  return (
-    <div>
-      <div className="container">
-        <AddUser />
-      </div>
-      <div className="container">
-        <UserList />
-      </div>
-    </div>
-  );
+  return <User />;
 }
 
 export default App;

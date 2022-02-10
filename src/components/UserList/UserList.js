@@ -1,29 +1,26 @@
-import { useState } from "react";
-
-import "./UserList.css";
+import classes from "./UserList.module.css";
 import Card from "../UI/Card/Card";
 
 const UserList = (props) => {
-  const [userList, setUserList] = useState([{ name: "Walaa Alaa", age: 26 }]);
-
   return (
     <Card>
-      <p className="title">User List</p>
-      {userList.map((user, index) => {
+      <p className={classes.title}>User List</p>
+      {props.userList.length === 0 && <span>no users to show.</span>}
+      {props.userList.map((user, index) => {
         return (
           <div
             style={
-              userList.length > index + 1
+              props.userList.length > index + 1
                 ? { borderBottom: "1px solid black" }
                 : {}
             }
             key={"user" + index}
           >
             <p>
-              <span className="bold">Name:</span> {user.name}
+              <span className={classes.bold}>Name:</span> {user.name}
             </p>
             <p>
-              <span className="bold">Age:</span> {user.age} (Years old)
+              <span className={classes.bold}>Age:</span> {user.age} (Years old)
             </p>
           </div>
         );

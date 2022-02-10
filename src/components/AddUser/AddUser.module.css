@@ -14,8 +14,7 @@
   border-radius: 3px;
 }
 .form-group__action {
-  display: flex;
-  justify-content: end;
+  display: flex-end;
   padding-top: 20px;
 }
 .form-group__action button {
